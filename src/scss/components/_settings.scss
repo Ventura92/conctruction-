@@ -1,3 +1,6 @@
+.html,.body{
+  overflow-x: hidden;
+}
 img {
   height: auto;
   max-width: 100%;
@@ -6,7 +9,10 @@ img {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
+
+
 
 .input-reset {
   -webkit-appearance: none;
