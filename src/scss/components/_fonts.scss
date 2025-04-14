@@ -1,7 +1,41 @@
 @font-face {
-  font-family: Roboto;
-  src: url('../fonts/Roboto.woff2') format('woff2');
+  font-family: Montserrat-300;
+  src: url('../fonts/Montserrat-light.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat-400;
+  src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
   font-weight: 400;
   font-display: swap;
 }
 
+@font-face {
+  font-family: Montserrat-500;
+  src: url('../fonts/Montserrat-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat-600;
+  src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat-700;
+  src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat-900;
+  src: url('../fonts/Montserrat-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+}

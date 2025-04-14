@@ -1,0 +1,15 @@
+@use '../mixins/_flex.scss' as *;
+@use '../components/variables' as vars;
+@use '../components/fonts' as *;
+@use '../mixins/_breakpoints.scss' as *;
+
+.soc1al{
+  @include flex();
+  column-gap: min(30px, 2vw);
+
+  &__link{
+    height: 100%;
+    width: min(22px,2vw);
+    aspect-ratio: 1;
+  }
+}

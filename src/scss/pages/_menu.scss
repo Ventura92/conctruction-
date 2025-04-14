@@ -1,0 +1,16 @@
+@use '../mixins/flex.scss' as *;
+@use '../mixins/fluid-text' as f;
+@use '../components/variables' as vars;
+
+.menu{
+
+  &__list{
+    @include flex-v-center();
+    justify-content: space-between;
+    column-gap: min(74px,3vw);
+  }
+
+  &__link{
+    @include f.fluid-text(18,16);
+  }
+}
