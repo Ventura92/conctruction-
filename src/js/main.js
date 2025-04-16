@@ -1,8 +1,8 @@
 
-import { swiperInit } from "./swiper.js";
+import { swiperBanner } from "./banner-swiper.js";
 import { showMessage } from "./tabs.js";
 
-// swiperInit()
+swiperBanner()
 showMessage();
 
 

@@ -1,8 +1,8 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 
-export function swiperInit(){
-  console.log(`coming from swiper`);
+export function swiperBanner(){
+  console.log(`coming from swiper-banner`);
 
 
   Swiper.use([Navigation,Pagination]);
@@ -11,9 +11,11 @@ export function swiperInit(){
     // configure Swiper to use modules
     modules: [Navigation, Pagination],  
     // Optional parameters
-    direction: 'vertical',
+    direction: 'horizontal',
+    slidesPerView: 1,
     loop: true,
-
+    clickable: true,
+    
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
@@ -23,11 +25,7 @@ export function swiperInit(){
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
+      clickable: true,
     },
   });
 }
