@@ -7,9 +7,13 @@
   @include flex();
   column-gap: min(30px, 2vw);
 
-  &__link{
-    height: 100%;
+  &__link svg{
     width: min(22px,2vw);
     aspect-ratio: 1;
+
+
+    &:hover{
+      stroke: vars.$color-main;
+    }
   }
 }

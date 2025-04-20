@@ -8,9 +8,31 @@
     @include flex-v-center();
     justify-content: space-between;
     column-gap: min(74px,3vw);
+
   }
 
   &__link{
     @include f.fluid-text(18,16);
+
+    position: relative; 
+    display: inline-flex;
+    height: 28px;
+
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: vars.$transition-duration;
+    }
+
+    &:hover::before{
+      width: 100%;
+    }
   }
 }

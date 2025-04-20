@@ -39,12 +39,21 @@
 
     &__address,&__phone{
       @include flex-v-center();
+
     }
 
     &__icon{
       margin-right: min(14px,2vw);
       width: min(22px,2vw);
       aspect-ratio: 1;
+    }
+
+    &__phone-number{
+      transition: color vars.$transition-duration ease-in-out;
+      
+      &:hover{
+        color: vars.$color-main;
+      }
     }
   }
 
