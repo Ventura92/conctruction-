@@ -7,25 +7,30 @@ export function swiperBanner(){
 
   Swiper.use([Navigation,Pagination]);
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.card', {
     // configure Swiper to use modules
     modules: [Navigation, Pagination],  
     // Optional parameters
     direction: 'horizontal',
     slidesPerView: 1,
     loop: true,
-    clickable: true,
+    // centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+
     
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
+      clickable: true,
     },
 
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-      clickable: true,
-    },
+      nextEl: '.card .swiper-button-next',
+      prevEl: '.card .swiper-button-prev',
+    }
   });
 }

@@ -1,0 +1,18 @@
+@use 'variables' as vars;
+@use '../mixins/fluid-text' as f;
+
+%main-btn{
+  @include f.fluid-text(18,12);
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: vars.$color-white;
+  font-family: Montserrat-500 serif;
+  background-color: vars.$color-main;
+  transition: background-color vars.$transition-duration ease-in-out;
+
+  &:hover{
+    background-color: vars.$color-main-hover;
+  }
+}
