@@ -1,0 +1,113 @@
+@use '../mixins/flex.scss' as *;
+@use '../mixins/breakpoints' as *;
+@use '../components/extends.scss' as *;
+@use '../mixins/fluid-text' as f;
+@use '../components/variables' as vars;
+
+.swiper{
+  width: 100%;
+  height: 725px;
+  margin-inline: auto;
+
+  &-slide{
+    @include flex-all-center();
+    flex-direction: column;
+
+    position: relative;
+    z-index: 10;
+
+
+    &::before{
+      content: '';
+      position: absolute;
+      display: block;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(35, 31, 31, 0.80);
+      z-index: -1;
+    }
+  }
+
+
+  &-pagination-bullet{
+    background-color: vars.$color-main;
+    border-radius: 0;
+  }
+
+  &-button-prev,
+  &-button-next{
+    background-color: rgba(90, 84, 84, 0.57);
+    width: 80px;
+    height: 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    transition: background-color vars.$transition-duration;
+
+    &:hover{
+      background-color: rgba(137, 75, 75, 0.57);
+    }
+  }
+
+  &-button-prev::after,
+  &-button-next::after{
+    display: none;
+  }
+
+  &-button-prev{
+    background-image: url('../img/arrow-left.svg');
+  }
+  
+  &-button-next{
+    background-image: url('../img/arrow-right.svg');
+  }
+}
+
+.card{
+
+  &__slide{
+    color: vars.$color-white;
+    text-align: center;
+    background-position: 100% 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__content{
+    max-width: 50%;
+
+    @include tablet{
+      max-width: 100%;
+    }
+  }
+
+  &__subtitle{
+    @include f.fluid-text(18,12);
+
+    text-transform: uppercase;
+
+    &:not(:last-child){
+      margin-bottom: 16px;
+    }
+  }
+
+  &__title{
+    @include f.fluid-text(54,22);
+
+    font-family: Montserrat-300,serif;
+    &:not(:last-child){
+      margin-bottom: 40px;
+    }
+
+    & strong{
+      display: block;
+      font-family: Montserrat-700,serif;
+    }
+  }
+
+  &__button{
+    @extend %main-btn;
+    padding: 18px 58px;
+  }
+}

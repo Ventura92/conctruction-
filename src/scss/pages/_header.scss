@@ -68,10 +68,13 @@
       @include flex();
       justify-content: space-between;
 
+      position: relative;
       flex-basis: 100%;
       background-color: vars.$color-main;
       box-shadow: vars.$box-shadow-1;
       margin-bottom: -40px;
+      z-index: 2;
+
     }
 
     &__logo{
